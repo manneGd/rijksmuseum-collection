@@ -1,0 +1,21 @@
+.collections {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  align-items: center;
+}
+
+.searchFilter {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  column-gap: 1rem;
+}
+
+.artObjectsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem;
+}
