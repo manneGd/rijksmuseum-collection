@@ -12,7 +12,7 @@ import NoResult from "../components/NoResult";
 import Loader from "../components/Loader";
 
 const Collections = () => {
-  const [page, setPage] = React.useState(1);
+  const [page, setPage] = React.useState(0);
   const [searchTerm, setSearchTerm] = React.useState("");
   const [artObjects, setArtObjects] = React.useState<ArtObjects[]>([]);
 

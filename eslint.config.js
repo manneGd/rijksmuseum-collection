@@ -30,24 +30,16 @@ export default tseslint.config(
       "no-const-assign": "error",
       "no-var": "error",
       'jsx-quotes': ["error", "prefer-double"],
-
-      // TypeScript specific rules
       '@typescript-eslint/no-explicit-any': 'error',
       '@typescript-eslint/no-unused-vars': 'error',
-      '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+      'no-unused-vars': 'off', // Turned off in favor of @typescript-eslint/no-unused-vars
       '@typescript-eslint/consistent-type-imports': [
         'error',
         { prefer: 'type-imports' }
       ],
-
-      // General ESLint rules
-      'no-unused-vars': 'off', // Turned off in favor of @typescript-eslint/no-unused-vars
       'quotes': ['error', 'double'],
       'semi': ['error', 'always'],
       'no-multiple-empty-lines': ['error', { max: 1 }],
-      'eqeqeq': ['error', 'always'],
-
-      // Object formatting
       'object-curly-newline': ['error', {
         ObjectExpression: { multiline: true, minProperties: 3 },
         ObjectPattern: { multiline: true, minProperties: 3 }
@@ -55,8 +47,6 @@ export default tseslint.config(
       'object-property-newline': ['error', {
         allowAllPropertiesOnSameLine: false
       }],
-
-      // Line breaks and spacing
       'padding-line-between-statements': [
         'error',
         { blankLine: 'always', prev: '*', next: 'return' },
@@ -65,8 +55,6 @@ export default tseslint.config(
         { blankLine: 'always', prev: 'directive', next: '*' },
         { blankLine: 'always', prev: ['case', 'default'], next: '*' }
       ],
-
-      // Line length and wrapping
       'max-len': ['error', {
         code: 80,
         ignoreStrings: true,
@@ -76,20 +64,14 @@ export default tseslint.config(
         ignoreUrls: true
       }],
       'max-statements-per-line': ['error', { max: 1 }],
-
-      // Chain calls formatting
       'newline-per-chained-call': ['error', {
         ignoreChainWithDepth: 2
       }],
-
-      // Comma style for multiline
       'comma-style': ['error', 'last'],
       'comma-dangle': ['error', {
         objects: 'always-multiline',
         functions: 'always-multiline'
       }],
-
-      // Indentation
       'indent': ['error', 2, {
         SwitchCase: 1,
         MemberExpression: 1,
@@ -98,8 +80,6 @@ export default tseslint.config(
         CallExpression: { arguments: 'first' },
         ObjectExpression: 1
       }],
-
-      // JSX specific
       '@stylistic/jsx-max-props-per-line': ['error', {
         maximum: 1,
         when: 'multiline'
@@ -116,8 +96,6 @@ export default tseslint.config(
         logical: 'parens-new-line',
         prop: 'parens-new-line'
       }],
-
-      // JSX Formatting
       '@stylistic/jsx-indent': ['error', 2, {
         checkAttributes: true,
         indentLogicalExpressions: true
@@ -126,21 +104,6 @@ export default tseslint.config(
       '@stylistic/jsx-one-expression-per-line': ['error', {
         allow: 'single-child'
       }],
-      // '@stylistic/jsx-newline': ['error', {
-      //   prevent: false,
-      //   allowMultilines: true
-      // }],
-      '@stylistic/jsx-sort-props': ['error', {
-        callbacksLast: true,
-        shorthandFirst: true,
-        shorthandLast: false,
-        multiline: 'last',
-        ignoreCase: true,
-        noSortAlphabetically: false,
-        reservedFirst: true,
-        locale: 'auto'
-      }],
-      '@stylistic/jsx-pascal-case': 'error',
       '@stylistic/jsx-curly-spacing': ['error', {
         when: 'never',
         children: true,
@@ -148,7 +111,6 @@ export default tseslint.config(
           allowMultiline: false
         }
       }],
-      '@stylistic/jsx-equals-spacing': ['error', 'never'],
       '@stylistic/jsx-curly-newline': ['error', {
         multiline: 'consistent',
         singleline: 'consistent'
