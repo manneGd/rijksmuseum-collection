@@ -1,0 +1,35 @@
+.card, .cardImage {
+  min-height: 15rem;
+  max-height: 20rem;
+  position: relative;
+  min-width: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardImage, .artInfo {
+  width: 100%;
+}
+
+.artInfo {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  background: linear-gradient(180deg, transparent 20%, black);
+  bottom: 0;
+  box-sizing: border-box;
+  color: #fff;
+  display: -webkit-box;
+  left: 0;
+  margin: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 10px;
+  position: absolute;
+  transition: 100ms ease-in;
+  word-break: break-word;
+}
+
+.card:hover .artInfo {
+  opacity: 1;
+}
