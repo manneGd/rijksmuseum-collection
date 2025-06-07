@@ -1,0 +1,14 @@
+.button {
+  padding: 0.5rem;
+  background-color: #000000;
+  border-radius: 6px;
+  color: #ffffff;
+}
+
+.button:hover:not([disabled]) {
+  background-color: #454545;
+}
+
+.button:disabled {
+  background-color: #9a9a9a;
+}
