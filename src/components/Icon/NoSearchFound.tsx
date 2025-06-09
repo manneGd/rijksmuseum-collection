@@ -14,21 +14,18 @@ const NoSearchFound = () => {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="1.5"
-      >
-      </path>
+      ></path>
       <path
         d="m16.062 16.568 3.438 3.425"
         stroke="#000"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="1.5"
-      >
-      </path>
+      ></path>
       <path
         d="M10.53 8.963a.75.75 0 1 0-1.06 1.06zm.94 3.06a.75.75 0 1 0 1.06-1.06zm1.06-1.06a.75.75 0 1 0-1.06 1.06zm.94 3.06a.75.75 0 1 0 1.06-1.06zm-.94-2a.75.75 0 0 0-1.06-1.06zm-3.06.94a.75.75 0 0 0 1.06 1.06zm2-2a.75.75 0 0 0 1.06 1.06zm3.06-.94a.75.75 0 0 0-1.06-1.06zm-5.06 0 2 2 1.06-1.06-2-2zm2 2 2 2 1.06-1.06-2-2zm0-1.06-2 2 1.06 1.06 2-2zm1.06 1.06 2-2-1.06-1.06-2 2z"
         fill="#000"
-      >
-      </path>
+      ></path>
     </svg>
   );
 };

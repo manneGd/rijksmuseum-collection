@@ -1,17 +1,25 @@
 import style from "./TextInput.module.scss";
-import {type Control, Controller, type FieldValues, type Path} from "react-hook-form";
+import {
+  type Control,
+  Controller,
+  type FieldValues,
+  type Path,
+} from "react-hook-form";
 
 export type TextInputProps<TFieldValues extends FieldValues> = {
   name: Path<TFieldValues>;
-  control: Control<TFieldValues>
+  control: Control<TFieldValues>;
   placeholder?: HTMLInputElement["placeholder"];
-  type?: HTMLInputElement["type"]
-}
+  type?: HTMLInputElement["type"];
+};
 
-const TextInput = <TFieldValues extends FieldValues, >({
-  name, placeholder, type, control,
+const TextInput = <TFieldValues extends FieldValues>({
+  name,
+  placeholder,
+  type,
+  control,
 }: TextInputProps<TFieldValues>) => {
-  return  (
+  return (
     <Controller
       control={control}
       name={name}

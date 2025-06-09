@@ -2,18 +2,13 @@ import * as React from "react";
 import style from "./Button.module.scss";
 
 export type ButtonProps = {
-    children: React.ReactNode
-    onClick?: React.MouseEventHandler<HTMLButtonElement>
-    isLoading?: boolean
-    type?: HTMLButtonElement["type"]
-}
+  children: React.ReactNode;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  isLoading?: boolean;
+  type?: HTMLButtonElement["type"];
+};
 
-const Button = ({
-  type,
-  onClick,
-  isLoading,
-  children,
-}: ButtonProps) => {
+const Button = ({ type, onClick, isLoading, children }: ButtonProps) => {
   return (
     <button
       className={style.button}
