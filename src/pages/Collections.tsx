@@ -12,14 +12,16 @@ import NoResult from "../components/NoResult";
 import Loader from "../components/Loader";
 
 const Collections = () => {
-  const [page, setPage] = React.useState(0);
+  const [page, setPage] = React.useState(1);
   const [searchTerm, setSearchTerm] = React.useState("");
   const [artObjects, setArtObjects] = React.useState<ArtObjects[]>([]);
 
+  const methods = useForm({ defaultValues: { search: "" } });
+
   const artObjectsQuery = useQuery({
     queryKey: ["collections", page, searchTerm],
-    queryFn: () => {
-      return axios({
+    queryFn: () =>
+      axios({
         method: "GET",
         url: `${BASE_URL}/en/collection`,
         params: {
@@ -29,16 +31,12 @@ const Collections = () => {
           q: searchTerm,
         },
       }).then((response) => {
-        setArtObjects((previousArtObjects) => {
-          return [...previousArtObjects, ...response.data.artObjects];
-        });
-
-        return response.data.artObjects;
-      });
-    },
+        setArtObjects((previousArtObjects) => [
+          ...previousArtObjects,
+          ...response.data.artObjects,
+        ]);
+      }),
   });
-
-  const methods = useForm({ defaultValues: { search: "" } });
 
   const handleSearch = (data: { search: string }) => {
     setArtObjects([]);

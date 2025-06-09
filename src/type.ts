@@ -11,4 +11,5 @@ export type ArtObjects = {
     height: number;
     url: string;
   } | null;
+  productionPlaces: string[];
 };
